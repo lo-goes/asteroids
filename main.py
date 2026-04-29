@@ -9,6 +9,7 @@ from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from circleshape import CircleShape
 from shot import Shot
+from logger import log_state
 
 def main():
     pygame.init()
@@ -38,6 +39,8 @@ def main():
 
     # game loop
     while True:
+        log_state()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
